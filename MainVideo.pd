@@ -1,14 +1,14 @@
-#N canvas 2 88 495 629 10;
+#N canvas 8 60 391 700 10;
 #X obj 28 114 gemwin;
 #X msg 46 74 destroy;
-#X obj 23 474 JW-V;
-#N canvas 68 113 816 515 COMUNICATIONS-V 0;
+#X obj 46 670 JW-V;
+#N canvas 66 114 816 515 COMUNICATIONS-V 0;
 #X obj 35 186 netsend;
 #X msg 23 41 connect localhost 8000;
 #X obj 75 132 prepend send;
 #X obj 103 73 r JW;
 #X msg 81 102 JW \$1;
-#X obj 30 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 30 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 28 233 outlet;
 #X obj 21 10 inlet;
@@ -101,43 +101,38 @@
 #X connect 46 3 45 0;
 #X connect 46 4 47 0;
 #X connect 46 4 49 0;
-#X restore 295 101 pd COMUNICATIONS-V;
-#X obj 295 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X restore 239 110 pd COMUNICATIONS-V;
+#X obj 239 132 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 25 568 Bolinhas-V;
-#X obj 118 61 gemhead;
-#X obj 118 88 world_light;
-#X floatatom 400 125 5 0 0 0 - - -, f 5;
-#X obj 374 583 Life-V;
-#X obj 25 549 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 181 673 Bolinhas-V;
+#X obj 117 76 gemhead;
+#X obj 117 98 world_light;
+#X floatatom 344 134 5 0 0 0 - - -, f 5;
+#X obj 50 306 Life-V;
+#X obj 148 673 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X msg 10 19 reset \, dimen 1024 768 \, FSAA 8 \, lighting 1 \, create
+#X msg 26 24 reset \, dimen 1024 768 \, FSAA 8 \, lighting 1 \, create
 \, 1;
-#X obj 296 71 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 240 80 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 374 562 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 29 306 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X msg 38 52 create \, 1;
-#X obj 23 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 23 669 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 374 498 r Explosion;
-#X obj 374 518 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 374 540 spigot;
-#X obj 407 521 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 29 242 r Explosion;
+#X obj 29 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 29 284 spigot;
+#X obj 60 263 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#N canvas 506 77 834 660 audio-words 0;
+#N canvas 505 107 834 660 audio-words 0;
 #X obj 132 229 pix_rgba;
 #X obj 132 259 pix_flip;
 #X obj 132 301 t a a;
 #X msg 35 221 horizontal;
-#X obj 35 196 r init;
-#X obj 36 139 s init;
-#X obj 35 114 loadbang;
 #X obj 37 364 pix_separator;
 #X obj 151 346 pix_separator;
-#X obj 34 396 pix_texture;
-#X obj 32 427 rectangle 5.33 4;
+#X obj 26 394 pix_texture;
 #X obj 153 419 pix_movement;
 #X obj 178 391 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
@@ -163,9 +158,7 @@
 #X obj 188 582 - 4;
 #X obj 187 556 * 8;
 #X obj 361 616 text3d;
-#X msg 388 586 font PUSSSA__.TTF;
-#X msg 534 487 text words;
-#X obj 290 454 r init;
+#X msg 323 570 font PUSSSA__.TTF;
 #X msg 289 143 speed \$1;
 #X obj 288 106 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 889 1;
@@ -179,17 +172,15 @@
 #X obj 436 121 r X;
 #X obj 466 122 r Y;
 #X obj 437 151 pack f f 0;
-#X msg 566 516 text BLA;
 #X obj 522 274 vsl 15 128 -20 20 0 0 empty empty gravity -30 -9 0 10
 -262130 -1 -1 0 1;
 #X msg 218 465 4;
-#X obj 253 41 r init;
 #X msg 390 495 0.2;
-#X obj 134 82 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 134 82 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 134 52 inlet onOff;
-#X obj 518 87 s word_color-bang;
-#N canvas 1 57 450 435 word-colors 0;
+#X obj 513 81 s word_color-bang;
+#N canvas 1 58 450 435 word-colors 0;
 #X obj 99 11 r word_color-bang;
 #X obj 111 375 outlet;
 #X obj 250 378 outlet;
@@ -221,7 +212,7 @@
 #X obj 46 329 spigot;
 #X obj 95 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#N canvas 1 56 476 464 det_speed 0;
+#N canvas 1 57 476 464 det_speed 0;
 #X obj 265 36 r Y;
 #X obj 71 22 r X;
 #X obj 92 121 f;
@@ -229,7 +220,7 @@
 #X obj 59 66 t f f b;
 #X floatatom 69 206 5 0 0 0 - - -, f 5;
 #X obj 234 140 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 81 1;
+-1 -1 424 1;
 #X obj 151 141 pack f 50;
 #X obj 149 168 line;
 #X obj 124 152 abs;
@@ -238,7 +229,7 @@
 #X obj 266 72 t f f b;
 #X floatatom 276 212 5 0 0 0 - - -, f 5;
 #X obj 418 144 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 195 1;
+-1 -1 768 1;
 #X obj 358 147 pack f 50;
 #X obj 356 174 line;
 #X obj 331 158 abs;
@@ -279,188 +270,217 @@
 #X connect 22 0 7 1;
 #X connect 22 0 15 1;
 #X restore 34 611 pd det_speed;
-#X obj 652 88 r tot_speed;
-#X floatatom 652 130 5 0 0 0 - - -, f 5;
-#X obj 648 177 sel 1;
-#X obj 673 392 random 5;
-#X msg 630 564 text MAIS;
-#X floatatom 702 119 5 0 0 0 - - -, f 5;
-#X msg 581 544 text pensamentos;
-#X obj 693 370 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 608 287 r tot_speed;
+#X obj 604 383 sel 1;
+#X floatatom 623 334 5 0 0 0 - - -, f 5;
+#X obj 621 436 t b b;
+#X obj 642 411 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 665 230 t b b;
-#X obj 686 205 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 655 290 onebang;
-#X obj 721 259 delay 2000;
-#X obj 651 151 > 3;
+#X obj 611 496 onebang;
+#X obj 658 465 delay 2000;
 #X text 13 9 words change with amount of movement (speed of blob) \;
 color cnages on bang inlet;
 #X msg 253 85 0.07;
-#X floatatom 634 421 5 0 0 0 - - -, f 5;
-#X obj 677 426 sel 0 1 2 3 4 5 6 7 8;
-#X msg 703 612 text cenas;
-#X obj 516 12 r audio-cor;
-#X msg 667 585 text rinoceronte;
-#X floatatom 601 42 5 0 0 0 - - -, f 5;
-#X obj 584 64 sel 1;
-#X obj 672 51 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 521 55 > 0.5;
+#X obj 514 57 sel 1;
 #X obj 89 52 r IMG;
 #X obj 134 122 spigot;
 #X msg 80 181 0;
+#X obj 516 12 r audio-vol;
+#X obj 516 33 > 0.65;
+#X obj 720 301 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 561 31 change word color \; with loudness (scream);
+#X obj 758 308 vsl 15 100 0 8 0 0 empty empty --- 0 50 0 10 -33289
+-262144 -257985 0 1;
+#X obj 689 340 spigot;
+#X floatatom 733 422 5 0 0 0 - - -, f 5;
+#N canvas 1 56 450 300 texts 0;
+#X obj 54 9 inlet bangs;
+#X obj 83 257 outlet texts;
+#X msg 82 111 text words;
+#X msg 114 140 text BLA;
+#X msg 178 188 text MAIS;
+#X msg 129 168 text pensamentos;
+#X floatatom 56 56 5 0 0 0 - - -, f 5;
+#X msg 251 236 text cenas;
+#X msg 312 153 text test;
+#X msg 215 209 text whatever;
+#X msg 335 181 text fala;
+#X msg 364 207 text pensa;
+#X msg 378 232 text sente;
+#X obj 267 66 sel 0 1 2 3 4 5 6 7 8 9;
+#X obj 59 32 random 10;
+#X obj 48 85 r B;
+#X connect 0 0 14 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 7 0 1 0;
+#X connect 8 0 1 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 0;
+#X connect 11 0 1 0;
+#X connect 12 0 1 0;
+#X connect 13 0 2 0;
+#X connect 13 1 3 0;
+#X connect 13 2 5 0;
+#X connect 13 3 4 0;
+#X connect 13 4 9 0;
+#X connect 13 5 7 0;
+#X connect 13 6 8 0;
+#X connect 13 7 10 0;
+#X connect 13 8 11 0;
+#X connect 13 9 12 0;
+#X connect 14 0 6 0;
+#X connect 14 0 13 0;
+#X connect 15 0 2 0;
+#X restore 612 534 pd texts;
+#X text 41 310 test img;
+#X obj 607 357 > 4;
+#X obj 35 196 r B;
+#X obj 290 454 r B;
+#X obj 253 40 r B;
+#X obj 24 425 rectangle 5.33 4;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X connect 2 1 8 0;
+#X connect 2 0 50 0;
+#X connect 2 1 5 0;
 #X connect 3 0 1 0;
-#X connect 4 0 3 0;
-#X connect 4 0 87 0;
-#X connect 6 0 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 79 0;
 #X connect 7 0 9 0;
-#X connect 8 0 11 0;
+#X connect 8 0 7 1;
 #X connect 9 0 10 0;
-#X connect 11 0 13 0;
-#X connect 12 0 11 1;
-#X connect 13 0 14 0;
-#X connect 14 0 58 0;
-#X connect 14 1 16 0;
-#X connect 14 1 30 0;
-#X connect 14 2 17 0;
-#X connect 14 2 32 0;
-#X connect 15 0 14 1;
-#X connect 18 0 41 0;
-#X connect 19 0 20 0;
-#X connect 20 0 23 0;
-#X connect 21 0 20 1;
-#X connect 22 0 20 2;
-#X connect 23 0 25 0;
-#X connect 24 0 23 1;
-#X connect 25 0 33 0;
-#X connect 26 0 18 0;
-#X connect 29 0 27 0;
+#X connect 10 1 12 0;
+#X connect 10 1 26 0;
+#X connect 10 2 13 0;
+#X connect 10 2 28 0;
+#X connect 11 0 10 1;
+#X connect 14 0 35 0;
+#X connect 15 0 16 0;
+#X connect 16 0 19 0;
+#X connect 17 0 16 1;
+#X connect 18 0 16 2;
+#X connect 19 0 21 0;
+#X connect 20 0 19 1;
+#X connect 21 0 29 0;
+#X connect 22 0 14 0;
+#X connect 25 0 23 0;
+#X connect 26 0 25 0;
+#X connect 27 0 24 0;
+#X connect 28 0 27 0;
 #X connect 30 0 29 0;
-#X connect 31 0 28 0;
+#X connect 31 0 14 0;
 #X connect 32 0 31 0;
-#X connect 34 0 33 0;
+#X connect 33 0 34 0;
+#X connect 34 0 15 0;
 #X connect 35 0 33 0;
-#X connect 36 0 34 0;
-#X connect 36 0 21 0;
-#X connect 36 0 22 0;
-#X connect 36 0 53 0;
-#X connect 36 0 51 0;
-#X connect 36 0 35 0;
-#X connect 37 0 18 0;
-#X connect 38 0 37 0;
-#X connect 39 0 40 0;
-#X connect 40 0 19 0;
-#X connect 41 0 39 0;
-#X connect 42 0 44 0;
-#X connect 43 0 44 1;
-#X connect 44 0 40 1;
-#X connect 45 0 40 2;
-#X connect 46 0 48 0;
-#X connect 47 0 48 1;
-#X connect 48 0 41 3;
-#X connect 49 0 33 0;
-#X connect 50 0 45 0;
-#X connect 51 0 15 0;
-#X connect 52 0 75 0;
-#X connect 53 0 24 0;
-#X connect 54 0 26 0;
-#X connect 54 0 86 1;
-#X connect 55 0 54 0;
-#X connect 57 0 20 1;
-#X connect 57 1 20 2;
-#X connect 58 0 7 0;
+#X connect 36 0 38 0;
+#X connect 37 0 38 1;
+#X connect 38 0 34 1;
+#X connect 39 0 34 2;
+#X connect 40 0 42 0;
+#X connect 41 0 42 1;
+#X connect 42 0 35 3;
+#X connect 43 0 39 0;
+#X connect 44 0 11 0;
+#X connect 45 0 20 0;
+#X connect 46 0 22 0;
+#X connect 46 0 64 1;
+#X connect 47 0 46 0;
+#X connect 49 0 16 1;
+#X connect 49 1 16 2;
+#X connect 50 0 4 0;
+#X connect 51 0 50 1;
+#X connect 53 0 71 0;
+#X connect 53 0 75 0;
+#X connect 54 0 56 0;
+#X connect 55 0 75 1;
+#X connect 56 0 58 0;
+#X connect 56 1 59 0;
+#X connect 57 0 56 0;
+#X connect 58 0 73 0;
 #X connect 59 0 58 1;
-#X connect 61 0 62 0;
-#X connect 62 0 73 0;
-#X connect 63 0 69 0;
-#X connect 64 0 76 0;
-#X connect 64 0 77 0;
-#X connect 65 0 33 0;
-#X connect 66 0 73 1;
-#X connect 67 0 33 0;
-#X connect 68 0 64 0;
-#X connect 69 0 71 0;
-#X connect 69 1 72 0;
-#X connect 70 0 69 0;
-#X connect 71 0 68 0;
-#X connect 72 0 71 1;
-#X connect 73 0 63 0;
-#X connect 75 0 38 0;
-#X connect 77 0 35 0;
-#X connect 77 1 49 0;
-#X connect 77 2 67 0;
-#X connect 77 3 65 0;
-#X connect 77 4 80 0;
-#X connect 79 0 81 0;
-#X connect 79 0 84 0;
-#X connect 80 0 33 0;
-#X connect 82 0 56 0;
-#X connect 82 0 83 0;
-#X connect 84 0 82 0;
-#X connect 85 0 86 0;
-#X connect 86 0 0 0;
-#X connect 87 0 54 0;
-#X restore 23 262 pd audio-words;
-#X obj 66 242 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X connect 61 0 32 0;
+#X connect 62 0 48 0;
+#X connect 63 0 64 0;
+#X connect 64 0 0 0;
+#X connect 65 0 46 0;
+#X connect 66 0 67 0;
+#X connect 67 0 62 0;
+#X connect 68 0 71 1;
+#X connect 70 0 72 0;
+#X connect 71 0 70 0;
+#X connect 73 0 29 0;
+#X connect 75 0 54 0;
+#X connect 76 0 3 0;
+#X connect 76 0 65 0;
+#X connect 77 0 30 0;
+#X connect 77 0 17 0;
+#X connect 77 0 18 0;
+#X connect 77 0 45 0;
+#X connect 77 0 44 0;
+#X connect 78 0 61 0;
+#X restore 23 422 pd audio-words;
+#X obj 23 401 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 25 568 nuAir-V;
+#X obj 25 547 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 25 482 r Explosion;
+#X obj 25 503 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 23 240 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 25 524 spigot;
+#X obj 58 505 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 59 171 r audio-vol;
-#X obj 63 198 > 1.2;
-#X obj 65 220 sel 1;
-#X obj 20 396 nuAir-V;
-#X obj 20 374 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 20 310 r Explosion;
-#X obj 20 330 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 20 352 spigot;
-#X obj 53 333 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 118 500 r Explosion;
-#X obj 118 520 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 170 629 r Explosion;
+#X obj 144 631 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 71 545 spigot;
-#X obj 119 546 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 142 651 spigot;
+#X obj 190 652 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 178 166 AUDIO WORDS \; video PC LOOPER + FRSB2SYNTH \; NU_AIR
-\; JOHN WHATEVER \; muda frsb to micro BOLINHAS TO TCHEVA \;;
-#N canvas 460 248 450 300 palavras_andantes 0;
-#X obj 27 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#N canvas 140 171 525 304 palavras_andantes 0;
+#X obj 27 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 24 69 s pal_and_ON;
-#X msg 160 70 yo;
-#X msg 157 151 bla;
-#X obj 154 91 palavra_andante 30 1;
-#X msg 280 122 ping;
-#X msg 277 202 pong;
 #X obj 30 17 inlet;
 #X obj 95 17 loadbang;
 #X msg 95 44 0;
 #X obj 140 46 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 151 172 palavra_andante 20 2;
-#X obj 274 143 palavra_andante 10 -1;
-#X obj 271 224 palavra_andante 13 3;
+#X msg 178 120 plick;
+#X msg 140 217 plock;
+#X msg 190 70 drip;
+#X msg 157 170 drop;
+#X msg 348 153 ploff;
+#X msg 351 73 spliff;
+#X obj 184 91 palavra_andante 30 1;
+#X obj 345 94 palavra_andante 15 -2;
+#X obj 151 191 palavra_andante 20 2;
+#X obj 172 141 palavra_andante 10 -1;
+#X obj 134 239 palavra_andante 13 3;
+#X obj 342 175 palavra_andante 9 -1.5;
 #X connect 0 0 1 0;
-#X connect 2 0 4 0;
-#X connect 3 0 11 0;
-#X connect 5 0 12 0;
-#X connect 6 0 13 0;
-#X connect 7 0 0 0;
-#X connect 8 0 9 0;
-#X connect 8 0 10 0;
-#X connect 9 0 0 0;
-#X connect 10 0 2 0;
-#X connect 10 0 3 0;
-#X connect 10 0 5 0;
-#X connect 10 0 6 0;
-#X restore 155 339 pd palavras_andantes;
-#N canvas 111 537 415 188 VideoInOut 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 5 0 8 0;
+#X connect 5 0 9 0;
+#X connect 5 0 6 0;
+#X connect 5 0 7 0;
+#X connect 5 0 11 0;
+#X connect 5 0 10 0;
+#X connect 6 0 15 0;
+#X connect 7 0 16 0;
+#X connect 8 0 12 0;
+#X connect 9 0 14 0;
+#X connect 10 0 17 0;
+#X connect 11 0 13 0;
+#X restore 246 327 pd palavras_andantes;
+#N canvas 105 540 415 188 VideoInOut 0;
 #X obj 75 78 pix_video;
 #X obj 75 48 gemhead;
 #X obj 75 111 s IMG;
@@ -474,11 +494,67 @@ color cnages on bang inlet;
 #X connect 4 0 0 0;
 #X connect 5 0 4 0;
 #X connect 6 0 5 0;
-#X restore 114 133 pd VideoInOut;
-#X obj 156 308 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X restore 114 139 pd VideoInOut;
+#X obj 226 324 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 116 114 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+#X obj 116 120 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
 -1 -1 1;
+#X obj 246 283 r Explosion;
+#X obj 246 303 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 270 305 spigot;
+#X obj 325 304 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 24 606 r Explosion;
+#X obj 24 627 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 24 648 spigot;
+#X obj 57 629 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#N canvas 642 236 450 300 sigla 0;
+#X obj 274 217 shell;
+#X msg 230 141 killall mplayer;
+#X obj 31 18 inlet bangVid;
+#X obj 215 20 inlet kill;
+#X obj 273 253 print;
+#X msg 28 65 mplayer -geometry 1400 -noborder -ao jack -slave -input
+file=/tmp/labio ./files/LOUIS_Cabaret.mp4;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 1 0;
+#X connect 5 0 0 0;
+#X restore 30 211 pd sigla;
+#X obj 31 171 bng 30 250 50 0 empty empty vid 7 12 0 10 -204786 -1
+-258113;
+#X obj 70 173 bng 30 250 50 0 empty empty kill 5 12 0 10 -261682 -1
+-4034;
+#X obj 224 452 motion_delaysss;
+#X obj 225 431 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#N canvas 1 57 450 300 VideoInit 0;
+#X obj 17 37 loadbang;
+#X obj 18 67 s B;
+#X obj 56 71 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 1 0;
+#X connect 2 0 1 0;
+#X restore 282 68 pd VideoInit;
+#X msg 38 52 create \, FSAA 8 \, lighting 1 \, 1;
+#X text 178 166 LIFE \; AUDIO WORDS + android looper \; motion_delaysss
++ FRSB2SYNTH \; free_s_be \; NU_AIR \; JOHN WHATEVER \; muda frsb to
+micro BOLINHAS \; sonarX + life \;;
+#X obj 246 385 r Explosion;
+#X obj 246 406 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 246 427 spigot;
+#X obj 279 408 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 50 354 r Explosion;
+#X obj 50 375 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 50 396 spigot;
+#X obj 83 377 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
 #X connect 1 0 0 0;
 #X connect 3 0 4 0;
 #X connect 3 1 8 0;
@@ -487,24 +563,40 @@ color cnages on bang inlet;
 #X connect 11 0 0 0;
 #X connect 12 0 3 0;
 #X connect 13 0 9 0;
-#X connect 14 0 0 0;
-#X connect 15 0 2 0;
+#X connect 14 0 2 0;
+#X connect 15 0 16 0;
 #X connect 16 0 17 0;
-#X connect 17 0 18 0;
-#X connect 18 0 13 0;
-#X connect 19 0 18 1;
-#X connect 22 0 20 0;
+#X connect 17 0 13 0;
+#X connect 18 0 17 1;
+#X connect 20 0 19 0;
+#X connect 22 0 21 0;
 #X connect 23 0 24 0;
 #X connect 24 0 25 0;
-#X connect 25 0 21 0;
-#X connect 27 0 26 0;
+#X connect 25 0 22 0;
+#X connect 26 0 25 1;
+#X connect 27 0 28 0;
 #X connect 28 0 29 0;
-#X connect 29 0 30 0;
-#X connect 30 0 27 0;
-#X connect 31 0 30 1;
-#X connect 32 0 33 0;
-#X connect 33 0 34 0;
-#X connect 34 0 10 0;
-#X connect 35 0 34 1;
-#X connect 39 0 37 0;
-#X connect 40 0 38 0;
+#X connect 29 0 10 0;
+#X connect 30 0 29 1;
+#X connect 33 0 31 0;
+#X connect 34 0 32 0;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 37 0 33 0;
+#X connect 38 0 37 1;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X connect 41 0 14 0;
+#X connect 42 0 41 1;
+#X connect 44 0 43 0;
+#X connect 45 0 43 1;
+#X connect 47 0 46 0;
+#X connect 49 0 0 0;
+#X connect 51 0 52 0;
+#X connect 52 0 53 0;
+#X connect 53 0 47 0;
+#X connect 54 0 53 1;
+#X connect 55 0 56 0;
+#X connect 56 0 57 0;
+#X connect 57 0 20 0;
+#X connect 58 0 57 1;
